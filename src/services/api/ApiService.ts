@@ -1,14 +1,16 @@
-/**
- * API Service placeholder.
- * Will be implemented in Experiment 01 (App Startup Time).
- */
+import {PerformanceMarker} from '../../performance/PerformanceMarker';
 
 export const ApiService = {
   /**
    * Initialize the API service.
-   * Placeholder — will include API_INIT markers in Experiment 01.
+   * Simulates a slow, blocking network request.
    */
   async initialize(): Promise<void> {
-    // Will be implemented in Phase 2
+    PerformanceMarker.begin('API_INIT');
+    
+    // Simulate a 1.5 second network request
+    await new Promise<void>(resolve => setTimeout(() => resolve(), 1500));
+    
+    PerformanceMarker.end('API_INIT');
   },
 };

@@ -104,6 +104,8 @@ const experiments: ExperimentConfig[] = [
 export const HomeScreen: React.FC = () => {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
+  console.log('✅ [HOME SCREEN] Home Screen is finally rendering!');
+
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
